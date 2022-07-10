@@ -1,4 +1,6 @@
 const path = require('path');
+const MinifyHtmlWebpackPlugin = require('minify-html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -19,4 +21,26 @@ module.exports = {
             },
         ],
     },
+    plugins: [
+        new MinifyHtmlWebpackPlugin({
+            src: './src',
+            dest: './dist',
+            ignoreFileNameRegex: /.*(?<!\.html)$/,
+            rules: {
+                collapseBooleanAttributes: true,
+                collapseWhitespace: true,
+                removeAttributeQuotes: true,
+                removeComments: true,
+                minifyJS: false,
+            }
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: "src/img", to: "img" },
+            ],
+            options: {
+                concurrency: 100,
+            },
+        }),
+    ],
 };
