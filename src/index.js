@@ -1,10 +1,11 @@
+const NUMBER_OF_PICS = 5;
+
 import './style.css';
 
 /**
  * Set random image for display
  */
 (async () => {
-    const imgNum = Math.floor(Math.random() * 2) + 1;
+    const imgNum = Math.floor(Math.random() * NUMBER_OF_PICS) + 1;
     document.querySelector("#bottom img#cover").setAttribute('src', `./img/${imgNum}.jpg`);
-    console.log(`chose img ${imgNum}`);
 })();
