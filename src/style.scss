@@ -73,10 +73,9 @@ body {
 }
 
 .social-link::before {
-    content: "\25B6\A0";
-    vertical-align: 0.3em;
-    letter-spacing: 3px;
-    font-size: 35%;
+    content: "\2022\A0";
+    vertical-align: -4px;
+    letter-spacing: 1px;
 }
 
 #social-container a {
