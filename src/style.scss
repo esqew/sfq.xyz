@@ -25,12 +25,33 @@ body {
     padding: 5vh 10vw;
     width: 50vw;
     max-height: 100vw;
+    display: grid;
+    grid-template:  "logo social"
+                    "break break"
+                    "image image";
 }
 
 @media (max-width: 600px) {
     #container {
         width: 100vw;
-        background-color: aqua;
+        grid-template:  "logo"
+                        "social"
+                        "break"
+                        "image";
+        justify-content: center;
+        text-align: center;
+    }
+
+    #logo-container {
+        margin-bottom: 20px;
+    }
+
+    #container div[id$=-container] {
+        width: 100vw;
+    }
+
+    hr, #bottom, #bottom img {
+        display: none !important;
     }
 }
 
@@ -39,11 +60,13 @@ body {
 }
 
 #logo-container {
+    grid-area: logo;
     min-width: 300px;
     justify-self: start;
 }
 
 #social-container {
+    grid-area: social;
     min-width: 300px;
     vertical-align: middle;
     justify-self: end;
@@ -76,14 +99,15 @@ body {
     letter-spacing: 2px;
 }
 
-hr {
-    border: 0.5px black solid;
+#break {
+    grid-area: break;
+    hr {
+        border: 0.5px black solid;
+    }    
 }
 
-#top {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
+#bottom {
+    grid-area: image;
 }
 
 #bottom,
