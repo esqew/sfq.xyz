@@ -1,6 +1,6 @@
 const NUMBER_OF_PICS = 5;
 
-import './style.css';
+import './style.scss';
 
 /**
  * Set random image for display

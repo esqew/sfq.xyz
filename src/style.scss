@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
 
-html, body {
+html,
+body {
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -11,6 +12,7 @@ html, body {
 
 body {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
@@ -25,21 +27,26 @@ body {
     max-height: 100vw;
 }
 
+@media (max-width: 600px) {
+    #container {
+        width: 100vw;
+        background-color: aqua;
+    }
+}
+
 #container div[id$=-container] {
-    margin: 0 auto;
     height: 100%;
 }
 
 #logo-container {
-    width: 60%;
-    float: left;
+    min-width: 300px;
+    justify-self: start;
 }
 
 #social-container {
-    width: 40%;
-    float: right;
+    min-width: 300px;
     vertical-align: middle;
-
+    justify-self: end;
 }
 
 .social-link::before {
@@ -73,8 +80,16 @@ hr {
     border: 0.5px black solid;
 }
 
-#bottom, #bottom img {
+#top {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+
+#bottom,
+#bottom img {
     width: 50vw;
+    min-width: 300px;
 }
 
 #bottom img {
