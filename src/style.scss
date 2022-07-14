@@ -51,16 +51,76 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-}
 
-#container {
-    padding: 5vh 10vw;
-    width: 50vw;
-    max-height: 100vw;
-    display: grid;
-    grid-template:  "logo social"
-                    "break break"
-                    "image image";
+    #container {
+        padding: 5vh 10vw;
+        width: 50vw;
+        max-height: 100vw;
+        display: grid;
+        grid-template:  "logo social"
+                        "break break"
+                        "image image";
+
+        div[id$=-container] {
+            height: 100%;
+        }
+        
+        #logo-container {
+            grid-area: logo;
+            min-width: 300px;
+            justify-self: start;
+        }
+        
+        #social-container {
+            grid-area: social;
+            min-width: 300px;
+            vertical-align: middle;
+            justify-self: end;
+        
+            display: grid;
+            padding-top: 1.5vh;
+    
+            .social-link {
+                font-weight: 300;
+                font-size: 70%;
+            }
+        }
+    }
+    
+    .clear {
+        clear: both;
+    }
+    
+    #logo {
+        font-weight: 900;
+        font-size: 250%;
+    }
+    
+    #tagline {
+        font-weight: 700;
+        font-size: 100%;
+        letter-spacing: 2px;
+    }
+    
+    #break {
+        grid-area: break;   
+    }
+    
+    #bottom {
+        grid-area: image;
+
+        img {
+            aspect-ratio: 16/9;
+        }
+    }
+    
+    #break,
+    #bottom,
+    #bottom img {
+        width: 50vw;
+        min-width: 300px;
+    }
+    
 }
 
 @media (max-width: 844px) {
@@ -88,63 +148,4 @@ body {
     hr, #bottom, #bottom img {
         display: none !important;
     }
-}
-
-#container div[id$=-container] {
-    height: 100%;
-}
-
-#logo-container {
-    grid-area: logo;
-    min-width: 300px;
-    justify-self: start;
-}
-
-#social-container {
-    grid-area: social;
-    min-width: 300px;
-    vertical-align: middle;
-    justify-self: end;
-
-    display: grid;
-    padding-top: 1.5vh;
-}
-
-#social-container .social-link {
-    font-weight: 300;
-    font-size: 70%;
-}
-
-.clear {
-    clear: both;
-}
-
-#logo {
-    font-weight: 900;
-    font-size: 250%;
-}
-
-#tagline {
-    font-weight: 700;
-    font-size: 100%;
-    letter-spacing: 2px;
-}
-
-#break {
-    grid-area: break;   
-}
-
-#bottom {
-    grid-area: image;
-}
-
-#break,
-#bottom,
-#bottom img {
-    width: 50vw;
-    min-width: 300px;
-}
-
-#bottom img {
-    aspect-ratio: 16/9;
 }
