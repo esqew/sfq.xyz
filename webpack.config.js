@@ -20,7 +20,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif|pdf)$/i,
                 type: 'asset/resource',
             },
         ],
@@ -41,6 +41,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 { from: "src/img", to: "img" },
+                { from: "src/resume-web.pdf" }
             ],
             options: {
                 concurrency: 100,
