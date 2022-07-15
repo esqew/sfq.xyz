@@ -132,7 +132,7 @@ body {
         grid-template:  "logo"
                         "social"
                         "break"
-                        "image";
+                        "image" !important;
         justify-content: center;
         text-align: center;
     }
