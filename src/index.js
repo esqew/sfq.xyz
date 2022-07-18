@@ -7,5 +7,5 @@ import './style.scss';
  */
 (async () => {
     const imgNum = Math.floor(Math.random() * NUMBER_OF_PICS) + 1;
-    document.querySelector("#bottom img#cover").setAttribute('src', `./img/${imgNum}.jpg`);
+    document.querySelector("#bottom img#cover").setAttribute('src', `./img/${imgNum}.webp`);
 })();
