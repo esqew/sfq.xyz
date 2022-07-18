@@ -76,7 +76,7 @@ body {
             min-width: 300px;
             vertical-align: middle;
             justify-self: end;
-        
+            justify-items: center;
             display: grid;
             padding-top: 1.5vh;
     
@@ -138,11 +138,18 @@ body {
     }
 
     #logo-container {
-        margin-bottom: 20px;
+        margin-bottom: 45px;
     }
 
     #container div[id$=-container] {
         width: 100vw;
+    }
+
+    #social-container div.social-link {
+        min-height: 48px;
+        a {
+            font-size: 150%;
+        }
     }
 
     hr, #bottom, #bottom img {
