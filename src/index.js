@@ -1,4 +1,4 @@
-const NUMBER_OF_PICS = 5;
+const NUMBER_OF_PICS = 7;
 
 import './style.scss';
 
