@@ -76,7 +76,7 @@ body {
             min-width: 300px;
             vertical-align: middle;
             justify-self: end;
-            justify-items: center;
+            justify-items: right;
             display: grid;
             padding-top: 1.5vh;
     
@@ -123,7 +123,7 @@ body {
     
 }
 
-@media (max-width: 844px) {
+@media (max-width: 1310px) {
     body {
         overflow: hidden;
     }
@@ -143,6 +143,10 @@ body {
 
     #container div[id$=-container] {
         width: 100vw;
+    }
+
+    #social-container {
+        justify-items: center !important;
     }
 
     #social-container div.social-link {
