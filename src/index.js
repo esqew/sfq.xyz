@@ -6,7 +6,7 @@ import imageData from './img/images.json'
  */
 
 (async () => {
-    for (image of imageData) {
+    for (var image of imageData) {
         let element = document.createElement('link');
         element.setAttribute('rel', 'preload');
         element.setAttribute('href', `./img/${image.file}`);
