@@ -41,8 +41,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 { from: "*.txt", context: path.resolve(__dirname, "src")},
-                { from: "src/img", to: "img" },
-                { from: "src/resume-web.pdf" }
+                { from: "src/img", to: "img" }
             ],
             options: {
                 concurrency: 100,
